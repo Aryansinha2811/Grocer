@@ -1,0 +1,83 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@font-face {
+    font-family: 'Logo';
+    src: url('./assets/fonts/Logo.otf') format('opentype');
+    font-weight: 400;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Logo2';
+    src: url('./assets/fonts/Logo2.ttf') format('truetype');
+    font-weight: 400;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Bold';
+    src: url('./assets/fonts/Bold.otf') format('opentype');
+    font-weight: 400;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Regular';
+    src: url('./assets/fonts/Regular.otf') format('opentype');
+    font-weight: 400;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Medium';
+    src: url('./assets/fonts/Medium.otf') format('opentype');
+    font-weight: 400;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Paragraph';
+    src: url('./assets/fonts/Paragraph.ttf') format('truetype');
+    font-weight: 400;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Button';
+    src: url('./assets/fonts/Button.ttf') format('truetype');
+    font-weight: 400;
+    font-style: normal;
+    font-display: swap;
+}
+
+:root {
+  /* Brand Colors */
+  --brand-primary: #FF451D;
+  --brand-secondary: #FF8A22;
+  --brand-dark-accent: #0D0E12;
+  
+  /* Custom Gradients */
+  --gradient-primary: linear-gradient(to right, #f83600 0%, #f9d423 100%);
+  --gradient-dark: linear-gradient(to right, #434343 0%, #000000 100%);
+}
+
+/* Custom Component Layer for complex custom buttons */
+@layer components {
+  .btn-gradient-primary {
+    background: var(--gradient-primary);
+    @apply text-white font-semibold px-6 py-3 rounded-full transition-all duration-300 hover:scale-105 shadow-md hover:shadow-lg;
+  }
+  
+  .btn-gradient-dark {
+    background: var(--gradient-dark);
+    @apply text-white font-semibold px-6 py-3 rounded-full transition-all duration-300 hover:scale-105 shadow-md hover:shadow-lg;
+  }
+}
